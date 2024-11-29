@@ -21,6 +21,9 @@ jobs:
     
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
+
+      - name: Ensure Docker Compose is available
+        uses: docker-compose version
     
       - name: COPY .env to .env.example
         run: cp ./1-integration-test/.env.example ./1-integration-test/.env
